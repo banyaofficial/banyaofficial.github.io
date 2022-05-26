@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Archives | Banya Project</title>
+        <title>Banya Project</title>
         <meta name="author" content="Banya">
         <meta name="description" content="">
         <meta name="keywords" content="">
@@ -118,33 +118,27 @@
                     </div>
                     <div id="main">
                         
-<div id="archives">
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/5/26</div>
-            <a href="/2022/05/26/12/">
-                <h3></h3>
-            </a>
-            <div class="info">
-                
-                
-            </div>
-        </div>
+<div class="article">
+    <div>
+        <h1> </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/5/26
+        </span>
+        
+        
+    </div>
+    <div class="content" v-pre>
+        <h1 id="233"><a href="#233" class="headerlink" title="233"></a>233</h1>
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2022/5/25</div>
-            <a href="/2022/05/25/我的第一篇博客/">
-                <h3>我的第一篇博客</h3>
-            </a>
-            <div class="info">
-                
-                
-            </div>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
         </div>
     </div>
     
@@ -176,6 +170,23 @@
         <script src="/js/particlex.js"></script>
         <script src="/js/showimg.js"></script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "", clientSecret = "";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "",
+        owner: "",
+        admin: [""],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: true
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
     </body>
 </html>
