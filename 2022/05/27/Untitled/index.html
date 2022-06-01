@@ -133,7 +133,35 @@
         
     </div>
     <div class="content" v-pre>
-        <h1 id="设计模式之单例模式"><a href="#设计模式之单例模式" class="headerlink" title="设计模式之单例模式"></a>设计模式之单例模式</h1><h2 id="什么是单例模式"><a href="#什么是单例模式" class="headerlink" title="什么是单例模式"></a>什么是单例模式</h2><p><img src="/image/Untitled/1653622576228.png"></p>
+        <h1 id="程序设计模式——单例"><a href="#程序设计模式——单例" class="headerlink" title="程序设计模式——单例"></a>程序设计模式——单例</h1><h2 id="什么是单例？"><a href="#什么是单例？" class="headerlink" title="什么是单例？"></a>什么是单例？</h2><p>在整个运行时域，一个类只有一个实例对象。</p>
+<h2 id="为什么需要单例？"><a href="#为什么需要单例？" class="headerlink" title="为什么需要单例？"></a>为什么需要单例？</h2><p>当类比较庞大复杂，如果频繁的销毁对象，并且这些对象都是可复用的，就会照成不必要的性能浪费。</p>
+<h2 id="实现单例模式需要考虑"><a href="#实现单例模式需要考虑" class="headerlink" title="实现单例模式需要考虑"></a>实现单例模式需要考虑</h2><p>1.是否线程安全</p>
+<p>2.是否懒加载</p>
+<p>3.能否反射破坏</p>
+<h2 id="单例写法："><a href="#单例写法：" class="headerlink" title="单例写法："></a>单例写法：</h2><pre><code class="cs">public class Singleton&lt;T&gt; where T: class,new()  
+&#123;  
+    private static T _instance;  
+    private static readonly object syslock=new object();  
+  
+    public static T Instance
+    &#123;  
+        get
+        &#123;
+            if (_instance == null)  
+            &#123;  
+                lock (syslock) &#123;  
+                    if (_instance == null)  
+                    &#123;  
+                        _instance = new T();  
+                    &#125;  
+                &#125;  
+            &#125;  
+           return _instance; 
+
+        &#125; 
+    &#125;  
+&#125;
+</code></pre>
 
     </div>
     
